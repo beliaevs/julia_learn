@@ -16,6 +16,12 @@ struct Vec{T}
     y::T
 end
 
+import Base.+
+
+function +(a::Vec{Int}, b::Vec{Int})
+    Vec{Int}(a.x + b.x, a.y + b.y)
+end
+
 v1 = Vec{Int}(1, 2)
 v2 = Vec{Int}(3, 4)
 v3 = v1 + v2
