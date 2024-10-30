@@ -1,5 +1,5 @@
-push!(LOAD_PATH, "./")
-using MyTest
+include("MyTest.jl")
+using .MyTest
 
 println("foo(1) = $(foo(1))")
 
